@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 20px;
+}
+
+nav{
+    background-color: rgb(202, 100, 117);
+    color: antiquewhite;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: pink;
+    height: 100vh;
+}
+
+.ques{
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 200px;
+}
+
+button{
+    font-size: 30px;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+
+
+#ybttn{
+    position: relative;
+    transition: transform 0.3s ease-out
+}
+
+#ybttn:hover{
+    cursor: pointer;
+    background-color: pink;
+}
+
+#nbttn{
+    transition: transform 0.5s ease-out
+}
+
+
+#nbttn:hover {
+    transform: translateX(200px) translateY(200px);
+}
+
+
+
+
+
+
+

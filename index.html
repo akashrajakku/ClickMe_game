@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR FUN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <nav>
+        <ul>
+            <li>
+                Click Me If You Can !!!
+            </li>
+        </ul>
+    </nav> -->
+    <div class="container">
+        <div class="ques"> Click Me If You Can !!! </div>
+        <div class="buttons">
+            <button id="ybttn">Click Me</button>
+            <button id="nbttn">Don't Click me</button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const runawayDiv = document.querySelector('#ybttn');
+  
+    document.addEventListener('mousemove', (event) => {
+      const { clientX, clientY } = event;
+      const divRect = runawayDiv.getBoundingClientRect();
+  
+      const centerX = divRect.left + divRect.width / 2;
+      const centerY = divRect.top + divRect.height / 2;
+  
+      const deltaX = clientX - centerX;
+      const deltaY = clientY - centerY;
+  
+      const angle = Math.atan2(deltaY, deltaX);
+      const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+  
+      const maxX = window.innerWidth - divRect.width;
+      const maxY = window.innerHeight - divRect.height;
+  
+      const newX = Math.min(Math.max(0, centerX + Math.cos(angle) * distance), maxX);
+      const newY = Math.min(Math.max(0, centerY + Math.sin(angle) * distance), maxY);
+  
+      runawayDiv.style.transform = `translate(${newX - centerX}px, ${newY - centerY}px)`;
+    });
+  </script>
+</html>
